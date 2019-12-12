@@ -15,7 +15,7 @@ def get_filters():
 
     Returns:
         (str) city - name of the city to analyze (Chicago, Washington or New York)
-        (str) month - name of the month to filter by, or "all" to apply no month filter
+        (str) month - name of the month to filter by (January to June), or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
