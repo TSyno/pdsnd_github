@@ -82,14 +82,9 @@ def load_data(city, month, day):
 
     # filter by month if applicable
     if month != 'all':
-<<<<<<< .merge_file_a14140
-        # use the index of the months list to get the corresponding int
-        month = MONTH_DATA.index(month)
-=======
+        
         # use the index of the MONTH_DATA list to get the corresponding value
-        months = ['january', 'february', 'march', 'april', 'may', 'june']
-        month = months.index(month) + 1
->>>>>>> .merge_file_a16200
+        month = MONTH_DATA.index(month)
 
         # filter by month to create the new dataframe
         df = df[df['month'] == month]
