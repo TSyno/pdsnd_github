@@ -103,7 +103,7 @@ def time_stats(df):
     start_time = time.time()
 
     # TO DO: display the most common month
-    #most_common_month = months[df['month'].mode()[0]].title()
+    # most_common_month = months[df['month'].mode()[0]].title()
     print(MONTH_DATA[df['month'].mode()[0]].title(), 'is the most common month')
     
 
@@ -111,7 +111,7 @@ def time_stats(df):
     print(df['day_of_week'].mode()[0].title(), 'is the most common day of week')
 
     # TO DO: display the most common start hour
-    #common_start_hour = 
+    # common_start_hour = 
     print(df['Start Time'].mode()[0].hour, 'hrs is the most common start hour')
 
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -181,6 +181,7 @@ def user_stats(df):
     
     
     # TO DO: Display counts of gender
+    # Check for gender column
     if 'Gender' in df:
         
         # Display counts of gender
@@ -200,7 +201,7 @@ def user_stats(df):
 
 
     # TO DO: Display earliest, most recent, and most common year of birth
-    #Check for birth year column
+    # Check for birth year column
     if 'Birth Year' in df:
         
         # Display earliest, most recent, and most common year of birth
@@ -222,7 +223,7 @@ def user_stats(df):
 def display_data(df):    
     i = 0
     j = 5      
-    #get user input for data displaying successive five rows of data at a time
+    # get user input for data displaying successive five rows of data at a time
     while True:
         data = input('Would you like to view the raw data(5 rows at a time)? Enter yes or no\n')
         if data.lower() == 'yes':
