@@ -81,7 +81,7 @@ def load_data(city, month, day):
 
     # filter by month if applicable
     if month != 'all':
-        # use the index of the months list to get the corresponding int
+        # use the index of the MONTH_DATA list to get the corresponding value
         months = ['january', 'february', 'march', 'april', 'may', 'june']
         month = months.index(month) + 1
 
