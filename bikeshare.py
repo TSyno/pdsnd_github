@@ -15,8 +15,8 @@ def get_filters():
     Asks user to specify a city, month, and day to analyze.
 
     Returns:
-        (str) city - name of the city to analyze
-        (str) month - name of the month to filter by, or "all" to apply no month filter
+        (str) city - name of the city to analyze (Chicago, Washington or New York)
+        (str) month - name of the month to filter by (January to June), or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
@@ -82,8 +82,14 @@ def load_data(city, month, day):
 
     # filter by month if applicable
     if month != 'all':
+<<<<<<< .merge_file_a14140
         # use the index of the months list to get the corresponding int
         month = MONTH_DATA.index(month)
+=======
+        # use the index of the MONTH_DATA list to get the corresponding value
+        months = ['january', 'february', 'march', 'april', 'may', 'june']
+        month = months.index(month) + 1
+>>>>>>> .merge_file_a16200
 
         # filter by month to create the new dataframe
         df = df[df['month'] == month]
@@ -103,7 +109,7 @@ def time_stats(df):
     start_time = time.time()
 
     # TO DO: display the most common month
-    #most_common_month = months[df['month'].mode()[0]].title()
+    # most_common_month = months[df['month'].mode()[0]].title()
     print(MONTH_DATA[df['month'].mode()[0]].title(), 'is the most common month')
     
 
@@ -111,7 +117,7 @@ def time_stats(df):
     print(df['day_of_week'].mode()[0].title(), 'is the most common day of week')
 
     # TO DO: display the most common start hour
-    #common_start_hour = 
+    # common_start_hour = 
     print(df['Start Time'].mode()[0].hour, 'hrs is the most common start hour')
 
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -181,6 +187,7 @@ def user_stats(df):
     
     
     # TO DO: Display counts of gender
+    # Check for gender column
     if 'Gender' in df:
         
         # Display counts of gender
@@ -200,7 +207,7 @@ def user_stats(df):
 
 
     # TO DO: Display earliest, most recent, and most common year of birth
-    #Check for birth year column
+    # Check for birth year column
     if 'Birth Year' in df:
         
         # Display earliest, most recent, and most common year of birth
@@ -222,7 +229,7 @@ def user_stats(df):
 def display_data(df):    
     i = 0
     j = 5      
-    #get user input for data displaying successive five rows of data at a time
+    # get user input for data displaying successive five rows of data at a time
     while True:
         data = input('Would you like to view the raw data(5 rows at a time)? Enter yes or no\n')
         if data.lower() == 'yes':
